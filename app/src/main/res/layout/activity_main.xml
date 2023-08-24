@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <EditText
-            android:id="@+id/inputToDo"
-            android:layout_width="match_parent"
+            android:id="@+id/inputsongname"
+            android:layout_width="367dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="할 일을 입력하세요."
+            android:hint="노래이름"
             android:inputType="textMultiLine" />
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:layout_weight="5"
-            android:text="저장"
+            android:text="저장장소"
             app:backgroundTint="?android:attr/colorActivatedHighlight" />
+
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/container"
+    <EditText
+        android:id="@+id/inputsingername"
         android:layout_width="match_parent"
-        android:layout_height="685dp">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
 
-    </FrameLayout>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
 
 </LinearLayout>

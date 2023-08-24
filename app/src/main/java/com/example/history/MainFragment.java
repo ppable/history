@@ -66,7 +66,7 @@ public class MainFragment extends Fragment {
     public int loadNoteListData(){
 
         //데이터를 가져오는 sql문 select... (id의 역순으로 정렬)
-        String loadSql = "select _id, TODO from " + NoteDatabase.TABLE_NOTE + " order by _id desc";
+        String loadSql = "select _id, SONGNAME from " + NoteDatabase.TABLE_NOTE + " order by _id desc";
 
         int recordCount = -1;
         NoteDatabase database = NoteDatabase.getInstance(context);
@@ -77,7 +77,7 @@ public class MainFragment extends Fragment {
 
             recordCount = outCursor.getCount();
 
-            //_id, TODO가 담겨질 배열 생성
+            //_id, SongName가 담겨질 배열 생성
             ArrayList<Note> items = new ArrayList<>();
 
             //for문을 통해 하나하나 추가
@@ -85,8 +85,9 @@ public class MainFragment extends Fragment {
                 outCursor.moveToNext();
 
                 int _id = outCursor.getInt(0);
-                String todo = outCursor.getString(1);
-                items.add(new Note(_id,todo));
+                String songname = outCursor.getString(1);
+                String singername = outCursor.getString(2);
+                items.add(new Note(_id,songname,singername));
             }
             outCursor.close();
 

@@ -14,25 +14,34 @@
     app:cardElevation="5dp">
 
     <LinearLayout
-        android:id="@+id/layoutTodo"
+        android:id="@+id/layoutSong"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+        <!--<VideoView
+            android:id="@+id/singVideo"
+            android:layout_width="112dp"
+            android:layout_height="63dp" />
 
-        <Button
-            android:id="@+id/deleteButton"
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">-->
+
+        <TextView
+            android:id="@+id/songName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="7"
-            android:text="X"
-            app:backgroundTint="@android:color/holo_orange_light" />
+            android:textSize="20sp"/>
+
+        <!--<TextView
+           android:id="@+id/singerName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="15sp"/>
+
+   </LinearLayout>-->
     </LinearLayout>
 </androidx.cardview.widget.CardView>

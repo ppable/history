@@ -2,11 +2,13 @@ package com.example.history;
 
 public class Note {
     int _id;
-    String todo;
+    String songname;
+    String singername;
 
-    public Note(int _id, String todo){
+    public Note(int _id, String songname, String singername){
         this._id = _id;
-        this.todo = todo;
+        this.songname = songname;
+        this.singername = singername;
     }
 
     public int get_id() {
@@ -17,11 +19,11 @@ public class Note {
         this._id = _id;
     }
 
-    public String getTodo() {
-        return todo;
-    }
+    public String getSongname() { return songname; }
 
-    public void setTodo(String todo) {
-        this.todo = todo;
-    }
+    public void setSongname(String songname) {this.songname = songname;}
+
+    public String getSingername() { return singername; }
+
+    public void setSingername(String singername) {this.singername = singername;}
 }

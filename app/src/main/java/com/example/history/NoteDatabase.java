@@ -10,7 +10,8 @@ public class NoteDatabase {
     private static final String TAG = "NoteDatabase";
 
     private static NoteDatabase database;
-    public static String DATABASE_NAME = "todo.db";
+    public static String DATABASE_NAME = "songname.db";
+
     public static String TABLE_NOTE = "NOTE";
     public static int DATABASE_VERSION = 1;
 
@@ -80,7 +81,7 @@ public class NoteDatabase {
             //테이블 생섣
             String CREATE_SQL = "create table " + TABLE_NOTE + "("
                     + " _id integer NOT NULL PRIMARY KEY AUTOINCREMENT, "
-                    + "  TODO TEXT DEFAULT '' "
+                    + "  SONGNAME TEXT DEFAULT '' "
                     + ")";
             try{
                 db.execSQL(CREATE_SQL);
